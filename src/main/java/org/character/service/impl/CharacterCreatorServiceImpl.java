@@ -2,23 +2,24 @@ package org.character.service.impl;
 
 import org.character.model.Stat;
 import org.character.model.Character;
+import org.character.service.CharacterCreatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
-public class CharacterCreatorServiceImpl {
+public class CharacterCreatorServiceImpl implements CharacterCreatorService {
 
     private final Stat[] stats;
     private final Scanner scanner = new Scanner(System.in);
 
     @Autowired
     public CharacterCreatorServiceImpl(Stat[] stats) {
-
         this.stats = stats;
     }
 
+    @Override
     public void createCharacter() {
 
         System.out.print("Character name: ");
@@ -41,7 +42,6 @@ public class CharacterCreatorServiceImpl {
     }
 
     private void diceRoll(Stat[] stats) {
-        Stat[] a = new Stat[6];
         Random random = new Random();
         int[] values = new int[6];
 
