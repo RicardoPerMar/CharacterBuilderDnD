@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Elf",
+    "attributes": {
+      "DEX": 2,
+      "INT": 1
+    },
+    "speed": 30,
+    "languages": ["Common", "Elvish"],
+    "traits": ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance"]
+  },
+  {
+    "name": "Human",
+    "attributes": {
+      "STR": 1,
+      "DEX": 1,
+      "CON": 1,
+      "INT": 1,
+      "WIS": 1,
+      "CHA": 1
+    },
+    "speed": 30,
+    "languages": ["Common", "Elvish"],
+    "traits": ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance"]
+  },
+  {
+    "name": "Dwarf",
+    "attributes": {
+      "STR": 2,
+      "CON": 2
+    },
+    "speed": 25,
+    "languages": ["Common", "Dwarvish"],
+    "traits": ["Darkvision", "Dwarven Resilience", "Stonecunning"]
+  }
+]
