@@ -1,10 +1,16 @@
 package org.character.config;
 
-import org.character.model.Stat;
-import org.character.service.impl.CharacterCreatorServiceImpl;
+import org.race.service.RaceService;
+import org.race.service.RaceServiceImpl;
+import org.stat.model.Stat;
+import org.character.service.CharacterCreatorServiceImpl;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.stat.service.StatService;
+import org.stat.service.StatServiceImpl;
+
+import java.util.List;
 
 @Configuration
 public class CharacterConfig {
@@ -40,13 +46,27 @@ public class CharacterConfig {
     }
 
     @Bean
+    public StatService statService() {
+        return new StatServiceImpl();
+    }
+
+    @Bean
+    public RaceService raceService() {
+        return new RaceServiceImpl();
+    }
+
+    @Bean
     public CharacterCreatorServiceImpl characterCreator(
             @Qualifier("STR") Stat STR,
             @Qualifier("DEX") Stat DEX,
             @Qualifier("CON") Stat CON,
             @Qualifier("INT") Stat INT,
             @Qualifier("WIS") Stat WIS,
-            @Qualifier("CHA") Stat CHA) {
-        return new CharacterCreatorServiceImpl(new Stat[]{STR, DEX, CON, INT, WIS, CHA});
+            @Qualifier("CHA") Stat CHA,
+            StatService statservice,
+            RaceService raceService) {
+        return new CharacterCreatorServiceImpl(new Stat[]{STR, DEX, CON, INT, WIS, CHA},
+                statservice,
+                raceService);
     }
 }

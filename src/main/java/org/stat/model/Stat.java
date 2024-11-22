@@ -1,5 +1,7 @@
-package org.character.model;
+package org.stat.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -7,8 +9,8 @@ public class Stat {
     private String name;
     private int value;
 
-
-    public Stat(String name, int value) {
+    @JsonCreator
+    public Stat(@JsonProperty("name")String name, @JsonProperty("value")int value) {
         this.name = name;
         this.value = value;
     }

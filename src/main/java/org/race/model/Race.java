@@ -1,32 +1,37 @@
-package org.character.model;
+package org.race.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
+import org.stat.model.Stat;
+import org.trait.model.Trait;
 
 import java.util.List;
 
 @Component
 public class Race {
 
-    String race;
+    String name;
     Stat[] stats;
     Trait[] traits;
     List<String> languages;
     int speed;
 
-    public Race(List<String> languages, String race, int speed, Stat[] stats, Trait[] traits) {
+    @JsonCreator
+    public Race(@JsonProperty("languages") List<String> languages, @JsonProperty("name") String name, @JsonProperty("speed") int speed, @JsonProperty("stats") Stat[] stats, @JsonProperty("traits") Trait[] traits) {
         this.languages = languages;
-        this.race = race;
+        this.name = name;
         this.speed = speed;
         this.stats = stats;
         this.traits = traits;
     }
 
-    public String getRace() {
-        return race;
+    public String getName() {
+        return name;
     }
 
-    public void setRace(String race) {
-        this.race = race;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Stat[] getStats() {
