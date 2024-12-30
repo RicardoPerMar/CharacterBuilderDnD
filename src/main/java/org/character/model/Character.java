@@ -2,7 +2,7 @@ package org.character.model;
 
 import org.springframework.stereotype.Component;
 import org.stat.model.Stat;
-import org.trait.model.Trait;
+import org.trait.Trait;
 
 import java.util.List;
 

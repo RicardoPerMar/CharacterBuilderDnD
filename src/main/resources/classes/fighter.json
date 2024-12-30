@@ -1,0 +1,25 @@
+{
+  "name": "Fighter",
+  "HD": "1d10",
+  "proficiencies": {
+    "Armor": "All armor, shields",
+    "Weapons": "Simple weapons, martial weapons",
+    "Tools": "None",
+    "Saving Throws": "Strength, Constitution"
+  },
+  "levels": {
+    "1": ["Fighting Style", "Second Wind"],
+    "2": ["Action Surge"],
+    "3": ["Martial Archetype"],
+    "7": ["Archetype Feature"],
+    "9": ["Indomitable"],
+    "10": ["Archetype Feature"],
+    "13": ["Indomitable (2)"],
+    "15": ["Archetype Feature"],
+    "17": ["Action Surge (2)", "Indomitable (3)"],
+    "18": ["Archetype Feature"]
+  },
+  "EA": [5, 11, 20],
+  "ASI": [4, 6, 8, 12, 14, 16, 19],
+  "_note": "EA means Extra attack, ASI means Ability Score Improvement, HD means Hit Dice"
+}

@@ -9,7 +9,7 @@ import org.character.model.Character;
 import org.stat.service.StatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.trait.model.Trait;
+import org.trait.Trait;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;

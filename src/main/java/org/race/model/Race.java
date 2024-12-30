@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 import org.stat.model.Stat;
-import org.trait.model.Trait;
+import org.trait.Trait;
 
 import java.util.List;
 

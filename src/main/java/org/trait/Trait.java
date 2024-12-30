@@ -1,4 +1,4 @@
-package org.trait.model;
+package org.trait;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Trait {
 
+    private Long id;
     private String name;
     private String description;
 

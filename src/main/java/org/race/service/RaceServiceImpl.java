@@ -17,7 +17,7 @@ public class RaceServiceImpl implements RaceService {
 
     public void listRaces() throws IOException {
         try {
-            List<Race> races = JsonReader.readJsonFile("src/main/resources/races.json", Race.class);
+            List<Race> races = JsonReader.readJsonFile("src/main/resources/races/phb_races.json", Race.class);
 
             for (Race race : races) {
                 System.out.println("race: " + race.getName());
@@ -39,7 +39,7 @@ public class RaceServiceImpl implements RaceService {
 
     private Race checkRace(String selectedRace){
         try {
-            List<Race> races = JsonReader.readJsonFile("src/main/resources/races.json", Race.class);
+            List<Race> races = JsonReader.readJsonFile("src/main/resources/races/phb_races.json", Race.class);
             Optional<Race> r = races.stream()
                     .filter(race -> race.getName().equalsIgnoreCase(selectedRace))
                     .findFirst();
