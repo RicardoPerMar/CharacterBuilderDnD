@@ -1,24 +1,17 @@
 package org.application.utils;
 
-//import org.application.strategies.DataLoaderStrategy;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import org.application.model.Race;
 import org.application.model.RaceStat;
 import org.application.model.Trait;
-import org.application.model.dto.RaceDTO;
 import org.application.repository.RaceRepository;
 import org.application.repository.RaceStatRepository;
 import org.application.repository.TraitRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 @Service
 public class DataLoader{

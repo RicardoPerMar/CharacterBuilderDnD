@@ -12,11 +12,14 @@ import org.springframework.stereotype.Component;
 @Order(1)
 public class StartupApplicationRunner implements ApplicationRunner {
 
-    @Autowired
-    private DataLoader dataLoader;
+    private final DataLoader dataLoader;
 
-    @Autowired
-    private MenuService menuService;
+    private final MenuService menuService;
+
+    public StartupApplicationRunner(DataLoader dataLoader, MenuService menuService) {
+        this.dataLoader = dataLoader;
+        this.menuService = menuService;
+    }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {

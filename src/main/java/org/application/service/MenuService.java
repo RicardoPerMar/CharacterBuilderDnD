@@ -34,11 +34,6 @@ public class MenuService {
                 case "1":
                     break;
                 case "2":
-                    try {
-                        //raceService.listRaces();
-                    } catch (Exception e) {
-                        //log.error("e: ", e);
-                    }
                     break;
                 case "3":
                     System.out.println("Thank you for use Character Builder DnD\n\n\n");
