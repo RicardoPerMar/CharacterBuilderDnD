@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Dwarf",
+    "stats": [
+      { "name": "CON", "value": 2 }
+    ],
+    "traits": [
+      { "name": "Darkvision", "description": "You can see in darkness up to 60 feet." },
+      { "name": "Dwarven Resilience", "description": "You have advantage on saving throws against poison, and you have resistance against poison damage." }
+    ],
+    "languages": ["Common", "Dwarvish"],
+    "speed": 25
+  },
+  {
+    "name": "Elf",
+    "stats": [
+      { "name": "DEX", "value": 2 }
+    ],
+    "traits": [
+      { "name": "Darkvision", "description": "You can see in darkness up to 60 feet." },
+      { "name": "Keen Senses", "description": "You have proficiency in the Perception skill." },
+      { "name": "Fey Ancestry", "description": "You have advantage on saving throws against being charmed, and magic can't put you to sleep." }
+    ],
+    "languages": ["Common", "Elvish"],
+    "speed": 30
+  },
+  {
+    "name": "Halfling",
+    "stats": [
+      { "name": "DEX", "value": 2 }
+    ],
+    "traits": [
+      { "name": "Lucky", "description": "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll." },
+      { "name": "Brave", "description": "You have advantage on saving throws against being frightened." },
+      { "name": "Halfling Nimbleness", "description": "You can move through the space of any creature that is of a size larger than yours." }
+    ],
+    "languages": ["Common", "Halfling"],
+    "speed": 25
+  },
+  {
+    "name": "Human",
+    "stats": [
+      { "name": "STR", "value": 1 },
+      { "name": "DEX", "value": 1 },
+      { "name": "CON", "value": 1 },
+      { "name": "INT", "value": 1 },
+      { "name": "WIS", "value": 1 },
+      { "name": "CHA", "value": 1 }
+    ],
+    "traits": [],
+    "languages": ["Common", "One additional language of your choice"],
+    "speed": 30
+  },
+  {
+    "name": "Dragonborn",
+    "stats": [
+      { "name": "STR", "value": 2 },
+      { "name": "CHA", "value": 1 }
+    ],
+    "traits": [
+      { "name": "Draconic Ancestry", "description": "You have a draconic ancestry. Choose one type of dragon." },
+      { "name": "Breath Weapon", "description": "You can use your action to exhale destructive energy. Your draconic ancestry determines the damage type." },
+      { "name": "Damage Resistance", "description": "You have resistance to the damage type associated with your draconic ancestry." }
+    ],
+    "languages": ["Common", "Draconic"],
+    "speed": 30
+  },
+  {
+    "name": "Gnome",
+    "stats": [
+      { "name": "INT", "value": 2 }
+    ],
+    "traits": [
+      { "name": "Darkvision", "description": "You can see in darkness up to 60 feet." },
+      { "name": "Gnome Cunning", "description": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic." }
+    ],
+    "languages": ["Common", "Gnomish"],
+    "speed": 25
+  },
+  {
+    "name": "Half-Elf",
+    "stats": [
+      { "name": "CHA", "value": 2 },
+      { "name": "Two other stats of your choice", "value": 1 }
+    ],
+    "traits": [
+      { "name": "Darkvision", "description": "You can see in darkness up to 60 feet." },
+      { "name": "Fey Ancestry", "description": "You have advantage on saving throws against being charmed, and magic can't put you to sleep." },
+      { "name": "Skill Versatility", "description": "You gain proficiency in two skills of your choice." }
+    ],
+    "languages": ["Common", "Elvish", "One additional language of your choice"],
+    "speed": 30
+  },
+  {
+    "name": "Half-Orc",
+    "stats": [
+      { "name": "STR", "value": 2 },
+      { "name": "CON", "value": 1 }
+    ],
+    "traits": [
+      { "name": "Darkvision", "description": "You can see in darkness up to 60 feet." },
+      { "name": "Relentless Endurance", "description": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. Once per long rest." },
+      { "name": "Savage Attacks", "description": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit." }
+    ],
+    "languages": ["Common", "Orc"],
+    "speed": 30
+  },
+  {
+    "name": "Tiefling",
+    "stats": [
+      { "name": "CHA", "value": 2 },
+      { "name": "INT", "value": 1 }
+    ],
+    "traits": [
+      { "name": "Darkvision", "description": "You can see in darkness up to 60 feet." },
+      { "name": "Hellish Resistance", "description": "You have resistance to fire damage." },
+      { "name": "Infernal Legacy", "description": "You know the Thaumaturgy cantrip. At 3rd level, you can cast Hellish Rebuke once per day. At 5th level, you can cast Darkness once per day." }
+    ],
+    "languages": ["Common", "Infernal"],
+    "speed": 30
+  }
+]
