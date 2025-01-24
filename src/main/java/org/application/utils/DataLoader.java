@@ -1,7 +1,7 @@
 package org.application.utils;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.annotation.PostConstruct;
 import org.application.model.Race;
 import org.application.model.RaceStat;
 import org.application.model.Trait;
@@ -9,13 +9,16 @@ import org.application.repository.RaceRepository;
 import org.application.repository.RaceStatRepository;
 import org.application.repository.TraitRepository;
 import org.springframework.stereotype.Service;
+import org.application.model.Character;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @Service
-public class DataLoader{
+public class DataLoader {
 
+    private final String FILE_PATH_CHARACTER_JSON = "src/main/resources/characters.json";
     private final RaceRepository raceRepository;
     private final RaceStatRepository raceStatRepository;
     private final ObjectMapper objectMapper;
@@ -25,13 +28,8 @@ public class DataLoader{
                       TraitRepository traitRepository) {
         this.objectMapper = objectMapper;
         this.raceRepository = raceRepository;
-        this.raceStatRepository  = raceStatRepository;
+        this.raceStatRepository = raceStatRepository;
         this.traitRepository = traitRepository;
-    }
-
-    @PostConstruct
-    public void init() throws IOException {
-        loadAllData();
     }
 
     public void loadAllData() throws IOException {
@@ -41,8 +39,8 @@ public class DataLoader{
     private void loadRaces() throws IOException {
         File file = new File("src/main/resources/races/phb_races.json");
         Race[] races = objectMapper.readValue(file, Race[].class);
-        for (Race race : races){
-            if (!raceRepository.existsByName(race.getName())){
+        for (Race race : races) {
+            if (!raceRepository.existsByName(race.getName())) {
                 raceRepository.save(race);
                 for (RaceStat stat : race.getRaceStat()) {
                     stat.setRace(race);
@@ -52,12 +50,21 @@ public class DataLoader{
                     trait.setRace(race);
                     traitRepository.save(trait);
                 }
-                System.out.println("Saved race: " + race.getName());
-            } else {
-                System.out.println("Race already exists: " + race.getName());
             }
-
-
         }
+    }
+
+    public List<Character> loadCharactersJSON() throws IOException{
+        File file = new File(FILE_PATH_CHARACTER_JSON);
+        if (!file.exists()) {
+            // TODO Create character.json when program is being executed not here
+            file.createNewFile();
+            return new java.util.ArrayList<>();
+        }
+        return objectMapper.readValue(file, new TypeReference<List<Character>>(){});
+    }
+
+    public void saveCharactersJSON(List<Character> characters) throws IOException{
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(FILE_PATH_CHARACTER_JSON), characters);
     }
 }

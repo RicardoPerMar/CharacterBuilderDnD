@@ -1,10 +1,11 @@
 package org.application.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 
 import java.util.List;
 
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Entity
 @Table(name = "races")
 public class Race {
@@ -27,6 +28,9 @@ public class Race {
 
     @ElementCollection
     private List<String> languages;
+
+    @OneToMany(mappedBy = "race", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Character> characters;
 
     public Race() {
     }
