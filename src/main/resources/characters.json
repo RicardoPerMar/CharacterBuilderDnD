@@ -1,123 +1,28 @@
-[
-  {
-    "id": 1,
-    "name": "Poppy",
-    "level": 3,
-    "race": {
-      "id": 1,
-      "name": "Dwarf",
-      "speed": 25,
-      "traits": [
-        {
-          "id": 1,
-          "name": "Darkvision",
-          "description": "You can see in darkness up to 60 feet.",
-          "race": 1
-        },
-        {
-          "id": 2,
-          "name": "Dwarven Resilience",
-          "description": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
-          "race": 1
-        }
-      ],
-      "languages": [
-        "Common",
-        "Dwarvish"
-      ],
-      "stats": [
-        {
-          "id": 1,
-          "name": "CON",
-          "value": 2,
-          "race": 1
-        }
-      ]
-    }
-  },
-  {
-    "id": 1,
-    "name": "Sirco",
-    "level": 20,
-    "race": {
-      "id": 7,
-      "name": "Half-Elf",
-      "speed": 30,
-      "traits": [
-        {
-          "id": 14,
-          "name": "Darkvision",
-          "description": "You can see in darkness up to 60 feet.",
-          "race": 7
-        },
-        {
-          "id": 15,
-          "name": "Fey Ancestry",
-          "description": "You have advantage on saving throws against being charmed, and magic can't put you to sleep.",
-          "race": 7
-        },
-        {
-          "id": 16,
-          "name": "Skill Versatility",
-          "description": "You gain proficiency in two skills of your choice.",
-          "race": 7
-        }
-      ],
-      "languages": [
-        "Common",
-        "Elvish",
-        "One additional language of your choice"
-      ],
-      "stats": [
-        {
-          "id": 13,
-          "name": "CHA",
-          "value": 2,
-          "race": 7
-        },
-        {
-          "id": 14,
-          "name": "Two other stats of your choice",
-          "value": 1,
-          "race": 7
-        }
-      ]
-    }
-  },
-  {
-    "id": 2,
-    "name": "Poppy",
-    "level": 3,
-    "race": {
-      "id": 1,
-      "name": "Dwarf",
-      "speed": 25,
-      "traits": [
-        {
-          "id": 1,
-          "name": "Darkvision",
-          "description": "You can see in darkness up to 60 feet.",
-          "race": 1
-        },
-        {
-          "id": 2,
-          "name": "Dwarven Resilience",
-          "description": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
-          "race": 1
-        }
-      ],
-      "languages": [
-        "Common",
-        "Dwarvish"
-      ],
-      "stats": [
-        {
-          "id": 1,
-          "name": "CON",
-          "value": 2,
-          "race": 1
-        }
-      ]
-    }
+[ {
+  "id" : 1,
+  "name" : "Poppy",
+  "level" : 3,
+  "race" : {
+    "id" : 1,
+    "name" : "Dwarf",
+    "speed" : 25,
+    "traits" : [ {
+      "id" : 1,
+      "name" : "Darkvision",
+      "description" : "You can see in darkness up to 60 feet.",
+      "race" : 1
+    }, {
+      "id" : 2,
+      "name" : "Dwarven Resilience",
+      "description" : "You have advantage on saving throws against poison, and you have resistance against poison damage.",
+      "race" : 1
+    } ],
+    "languages" : [ "Common", "Dwarvish" ],
+    "stats" : [ {
+      "id" : 1,
+      "name" : "CON",
+      "value" : 2,
+      "race" : 1
+    } ]
   }
-]
+} ]

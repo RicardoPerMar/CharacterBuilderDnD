@@ -8,6 +8,8 @@ import org.application.model.Trait;
 import org.application.repository.RaceRepository;
 import org.application.repository.RaceStatRepository;
 import org.application.repository.TraitRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.application.model.Character;
 
@@ -18,11 +20,19 @@ import java.util.List;
 @Service
 public class DataLoader {
 
-    private final String FILE_PATH_CHARACTER_JSON = "src/main/resources/characters.json";
+    @Value("${file.character.path}")
+    private String CHARACTER_JSON_PATH;
+
+    @Value("${file.race.path}")
+    private String RACE_JSON_PATH;
+
     private final RaceRepository raceRepository;
     private final RaceStatRepository raceStatRepository;
     private final ObjectMapper objectMapper;
     private final TraitRepository traitRepository;
+
+    @Autowired
+    private JsonFileService jsonFileService;
 
     public DataLoader(ObjectMapper objectMapper, RaceRepository raceRepository, RaceStatRepository raceStatRepository,
                       TraitRepository traitRepository) {
@@ -37,8 +47,9 @@ public class DataLoader {
     }
 
     private void loadRaces() throws IOException {
-        File file = new File("src/main/resources/races/phb_races.json");
-        Race[] races = objectMapper.readValue(file, Race[].class);
+        File file = new File(RACE_JSON_PATH);
+        //Race[] races = objectMapper.readValue(file, Race[].class);
+        Race[] races = jsonFileService.readJsonFile(RACE_JSON_PATH, new TypeReference<List<Race>>() {}).toArray(new Race[0]);
         for (Race race : races) {
             if (!raceRepository.existsByName(race.getName())) {
                 raceRepository.save(race);
@@ -54,17 +65,19 @@ public class DataLoader {
         }
     }
 
-    public List<Character> loadCharactersJSON() throws IOException{
-        File file = new File(FILE_PATH_CHARACTER_JSON);
+    public List<Character> loadCharactersJSON() throws IOException {
+        /*File file = new File(CHARACTER_JSON_PATH);
         if (!file.exists()) {
             // TODO Create character.json when program is being executed not here
             file.createNewFile();
             return new java.util.ArrayList<>();
         }
-        return objectMapper.readValue(file, new TypeReference<List<Character>>(){});
+        return objectMapper.readValue(file, new TypeReference<List<Character>>() {
+        });*/
+        return jsonFileService.readJsonFile(CHARACTER_JSON_PATH, new TypeReference<List<Character>>(){});
     }
 
-    public void saveCharactersJSON(List<Character> characters) throws IOException{
-        objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(FILE_PATH_CHARACTER_JSON), characters);
+    public void saveCharactersJSON(List<Character> characters) throws IOException {
+        jsonFileService.writeJsonFile(CHARACTER_JSON_PATH, characters);
     }
 }

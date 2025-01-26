@@ -1,5 +1,6 @@
 package org.application.service;
 
+import org.application.utils.InputService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,12 +10,17 @@ import java.util.Scanner;
 @Service
 public class MenuService {
 
-    private final Scanner scanner = new Scanner(System.in);
-    @Autowired
-    private RaceService raceService;
-    @Autowired
-    private CharacterService characterService;
+    //private final Scanner scanner = new Scanner(System.in);
+    private final RaceService raceService;
+    private final CharacterService characterService;
+    private final InputService inputService;
     private final String doubleLine = "=".repeat(200) + "\n";
+
+    public MenuService(CharacterService characterService, RaceService raceService, InputService inputService) {
+        this.characterService = characterService;
+        this.raceService = raceService;
+        this.inputService = inputService;
+    }
 
     public void showMenu() throws InterruptedException, IOException {
         String option;
@@ -26,16 +32,9 @@ public class MenuService {
         Thread.sleep(500);
 
         do {
-            System.out.print("""
-                    Select your option:
-                    
-                    1. Create character
-                    2. Information
-                    3. Exit
-                    
-                    """);
+            printMenuOptions();
             System.out.print("Option: ");
-            option = scanner.nextLine();
+            option = inputService.getLineInput();
             System.out.println("\n" + doubleLine);
             switch (option) {
                 case "1":
@@ -55,6 +54,17 @@ public class MenuService {
                     System.out.println("-".repeat(60) + "\n");
             }
         } while (!option.equals("3"));
+    }
+
+    private void printMenuOptions(){
+        System.out.print("""
+                    Select your option:
+                    
+                    1. Create character
+                    2. Information
+                    3. Exit
+                    
+                    """);
     }
 }
 

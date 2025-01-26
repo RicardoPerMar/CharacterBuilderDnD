@@ -7,6 +7,7 @@ import org.application.repository.CharacterRepository;
 import org.application.repository.RaceRepository;
 import org.application.service.CharacterService;
 import org.application.utils.DataLoader;
+import org.application.utils.InputService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,20 +21,18 @@ public class CharacterServiceImpl implements CharacterService {
     private final DataLoader dataLoader;
     private final RaceRepository raceRepository;
     private final CharacterRepository characterRepository;
-    private final ObjectMapper objectMapper;
+    private final InputService inputService;
 
     private final Scanner scanner = new Scanner(System.in);
-    private final String filePath = "src/main/resources/characters.json";
 
-    public CharacterServiceImpl(CharacterRepository characterRepository, RaceRepository raceRepository, ObjectMapper objectMapper,
-                                DataLoader dataLoader) {
+    public CharacterServiceImpl(CharacterRepository characterRepository, RaceRepository raceRepository, DataLoader dataLoader,
+                                InputService inputService) {
         this.characterRepository = characterRepository;
         this.raceRepository = raceRepository;
-        this.objectMapper = objectMapper;
         this.dataLoader = dataLoader;
+        this.inputService = inputService;
     }
 
-    @Transactional
     public void createCharacter() throws IOException {
         List<Character> characters = dataLoader.loadCharactersJSON();
         Character character = new Character();
