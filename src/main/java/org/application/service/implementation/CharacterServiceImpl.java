@@ -1,6 +1,5 @@
 package org.application.service.implementation;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.application.model.Character;
 import org.application.model.Race;
 import org.application.repository.CharacterRepository;
@@ -9,7 +8,6 @@ import org.application.service.CharacterService;
 import org.application.utils.DataLoader;
 import org.application.utils.InputService;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.util.List;

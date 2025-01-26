@@ -1,11 +1,9 @@
 package org.application.service;
 
 import org.application.utils.InputService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 @Service
 public class MenuService {

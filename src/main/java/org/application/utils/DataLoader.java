@@ -48,7 +48,6 @@ public class DataLoader {
 
     private void loadRaces() throws IOException {
         File file = new File(RACE_JSON_PATH);
-        //Race[] races = objectMapper.readValue(file, Race[].class);
         Race[] races = jsonFileService.readJsonFile(RACE_JSON_PATH, new TypeReference<List<Race>>() {}).toArray(new Race[0]);
         for (Race race : races) {
             if (!raceRepository.existsByName(race.getName())) {
@@ -66,14 +65,7 @@ public class DataLoader {
     }
 
     public List<Character> loadCharactersJSON() throws IOException {
-        /*File file = new File(CHARACTER_JSON_PATH);
-        if (!file.exists()) {
-            // TODO Create character.json when program is being executed not here
-            file.createNewFile();
-            return new java.util.ArrayList<>();
-        }
-        return objectMapper.readValue(file, new TypeReference<List<Character>>() {
-        });*/
+        // TODO Create character.json when program is being executed not here
         return jsonFileService.readJsonFile(CHARACTER_JSON_PATH, new TypeReference<List<Character>>(){});
     }
 
