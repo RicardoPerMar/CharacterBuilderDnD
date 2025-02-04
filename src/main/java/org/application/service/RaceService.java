@@ -7,6 +7,5 @@ import java.util.List;
 
 @Service
 public interface RaceService {
-    void showAllRaces();
     List<Race> getAllRaces();
 }

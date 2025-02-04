@@ -1,6 +1,5 @@
 package org.application.controller;
 
-import jakarta.websocket.server.PathParam;
 import org.application.model.Character;
 import org.application.model.dto.CharacterDTO;
 import org.application.service.CharacterService;
