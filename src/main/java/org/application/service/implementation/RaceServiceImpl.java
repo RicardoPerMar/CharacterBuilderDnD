@@ -38,4 +38,9 @@ public class RaceServiceImpl implements RaceService {
         }
         System.out.println("=".repeat(200) + "\n");
     }
+
+    @Override
+    public List<Race> getAllRaces() {
+        return raceRepository.findAll();
+    }
 }
