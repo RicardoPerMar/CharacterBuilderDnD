@@ -1,5 +1,6 @@
 package org.application.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,6 +20,12 @@ public class Character {
     @ManyToOne
     @JoinColumn(name = "race_id", nullable = false)
     private Race race;
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "stat_id")
+    @JsonManagedReference
+    private Stat stat;
+
 
     public Character() {
     }
@@ -53,5 +60,13 @@ public class Character {
 
     public void setRace(Race race) {
         this.race = race;
+    }
+
+    public Stat getStat() {
+        return stat;
+    }
+
+    public void setStat(Stat stat) {
+        this.stat = stat;
     }
 }

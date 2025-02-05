@@ -1,28 +1,3 @@
-[ {
-  "id" : 1,
-  "name" : "Poppy",
-  "level" : 3,
-  "race" : {
-    "id" : 1,
-    "name" : "Dwarf",
-    "speed" : 25,
-    "traits" : [ {
-      "id" : 1,
-      "name" : "Darkvision",
-      "description" : "You can see in darkness up to 60 feet.",
-      "race" : 1
-    }, {
-      "id" : 2,
-      "name" : "Dwarven Resilience",
-      "description" : "You have advantage on saving throws against poison, and you have resistance against poison damage.",
-      "race" : 1
-    } ],
-    "languages" : [ "Common", "Dwarvish" ],
-    "stats" : [ {
-      "id" : 1,
-      "name" : "CON",
-      "value" : 2,
-      "race" : 1
-    } ]
-  }
-} ]
+[
+
+]

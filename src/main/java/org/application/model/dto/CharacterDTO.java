@@ -1,11 +1,13 @@
 package org.application.model.dto;
 
 import org.application.model.Race;
+import org.application.model.Stat;
 
 public class CharacterDTO {
     private String name;
     private int level;
     private Race race;
+    private Stat stat;
 
     public int getLevel() {
         return level;
@@ -29,5 +31,13 @@ public class CharacterDTO {
 
     public void setRace(Race race) {
         this.race = race;
+    }
+
+    public Stat getStat() {
+        return stat;
+    }
+
+    public void setStat(Stat stat) {
+        this.stat = stat;
     }
 }

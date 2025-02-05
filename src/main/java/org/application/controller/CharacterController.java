@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/characters")
@@ -38,6 +39,13 @@ public class CharacterController {
     public ResponseEntity<List<Character>> createCharacterList(@RequestBody List<CharacterDTO> characterDTOList) throws IOException {
         List<Character> characters = characterService.createCharacterList(characterDTOList);
         return ResponseEntity.status(HttpStatus.CREATED).body(characters);
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Character> updateCharacter(@PathVariable Long id, @RequestBody Character newCharacter){
+        return characterService.updateCharacter(id, newCharacter)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
     @DeleteMapping
