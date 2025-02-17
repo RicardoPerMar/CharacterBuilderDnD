@@ -1,25 +1,52 @@
-{
-  "name": "Fighter",
-  "HD": "1d10",
-  "proficiencies": {
-    "Armor": "All armor, shields",
-    "Weapons": "Simple weapons, martial weapons",
-    "Tools": "None",
-    "Saving Throws": "Strength, Constitution"
-  },
-  "levels": {
-    "1": ["Fighting Style", "Second Wind"],
-    "2": ["Action Surge"],
-    "3": ["Martial Archetype"],
-    "7": ["Archetype Feature"],
-    "9": ["Indomitable"],
-    "10": ["Archetype Feature"],
-    "13": ["Indomitable (2)"],
-    "15": ["Archetype Feature"],
-    "17": ["Action Surge (2)", "Indomitable (3)"],
-    "18": ["Archetype Feature"]
-  },
-  "EA": [5, 11, 20],
-  "ASI": [4, 6, 8, 12, 14, 16, 19],
-  "_note": "EA means Extra attack, ASI means Ability Score Improvement, HD means Hit Dice"
-}
+[
+  {
+    "name": "Fighter",
+    "hitDice": "1d10",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "Light armor, medium armor, heavy armor, shields" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Simple weapons, martial weapons" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "None" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Strength, Constitution" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Second Wind"]
+      },
+      {
+        "level": 2,
+        "features": ["Action Surge"]
+      },
+      {
+        "level": 3,
+        "features": ["Martial Archetype"]
+      },
+      {
+        "level": 5,
+        "features": ["Extra Attack"]
+      },
+      {
+        "level": 7,
+        "features": ["Indomitable"]
+      },
+      {
+        "level": 10,
+        "features": ["Improved Extra Attack"]
+      },
+      {
+        "level": 15,
+        "features": ["Superior Defense"]
+      },
+      {
+        "level": 18,
+        "features": ["Survivor"]
+      },
+      {
+        "level": 20,
+        "features": ["Master of Battle"]
+      }
+    ],
+    "extraAttack": [5, 10],
+    "abilityScoreImprovement": [4, 6, 8, 12, 16, 19]
+  }
+]

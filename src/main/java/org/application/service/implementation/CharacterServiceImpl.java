@@ -3,9 +3,11 @@ package org.application.service.implementation;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.application.model.Character;
+import org.application.model.CharacterClass;
 import org.application.model.Race;
 import org.application.model.Stat;
 import org.application.model.dto.CharacterDTO;
+import org.application.repository.CharacterClassRepository;
 import org.application.repository.CharacterRepository;
 import org.application.repository.RaceRepository;
 import org.application.repository.StatRepository;
@@ -29,15 +31,17 @@ public class CharacterServiceImpl implements CharacterService {
     private final RaceRepository raceRepository;
     private final StatRepository statRepository;
     private final CharacterRepository characterRepository;
+    private final CharacterClassRepository characterClassRepository;
 
     private final Scanner scanner = new Scanner(System.in);
 
     public CharacterServiceImpl(CharacterRepository characterRepository, RaceRepository raceRepository, StatRepository statRepository,
-                                DataLoader dataLoader) {
+                                DataLoader dataLoader, CharacterClassRepository characterClassRepository) {
         this.characterRepository = characterRepository;
         this.raceRepository = raceRepository;
         this.statRepository = statRepository;
         this.dataLoader = dataLoader;
+        this.characterClassRepository = characterClassRepository;
     }
 
     @Override
@@ -66,6 +70,11 @@ public class CharacterServiceImpl implements CharacterService {
         Stat stat = characterDTO.getStat();
         statRepository.save(stat);
         character.setStat(stat);
+
+        Long characterClassId = characterDTO.getCharacterClass().getId();
+        CharacterClass characterClass = characterClassRepository.findById(characterClassId).
+                orElseThrow(() -> new IllegalArgumentException("Class not found with id: " + characterClassId));
+        character.setCharacterClass(characterClass);
 
         return characterRepository.save(character);
     }

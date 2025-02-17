@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Wizard",
+    "hitDice": "1d6",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "None" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Daggers, darts, slings, quarterstaffs, light crossbows" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "None" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Intelligence, Wisdom" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Spellcasting"]
+      },
+      {
+        "level": 2,
+        "features": ["Arcane Tradition"]
+      },
+      {
+        "level": 3,
+        "features": ["Spellcasting Improvement"]
+      },
+      {
+        "level": 5,
+        "features": ["Extra Spell Slots"]
+      },
+      {
+        "level": 7,
+        "features": ["Arcane Mastery"]
+      },
+      {
+        "level": 10,
+        "features": ["Spell Mastery"]
+      },
+      {
+        "level": 14,
+        "features": ["Spellcasting Flexibility"]
+      },
+      {
+        "level": 18,
+        "features": ["Master of Magic"]
+      },
+      {
+        "level": 20,
+        "features": ["Archmage"]
+      }
+    ],
+    "extraAttack": [0],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]

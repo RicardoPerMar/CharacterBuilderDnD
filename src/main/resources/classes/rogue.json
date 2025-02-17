@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Rogue",
+    "hitDice": "1d8",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "Light armor" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Simple weapons, hand crossbows, longswords, rapiers, shortswords" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "Thieves' tools" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Dexterity, Intelligence" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Sneak Attack", "Thieves' Cant"]
+      },
+      {
+        "level": 2,
+        "features": ["Cunning Action"]
+      },
+      {
+        "level": 3,
+        "features": ["Roguish Archetype"]
+      },
+      {
+        "level": 5,
+        "features": ["Uncanny Dodge"]
+      },
+      {
+        "level": 7,
+        "features": ["Evasion"]
+      },
+      {
+        "level": 10,
+        "features": ["Reliable Talent"]
+      },
+      {
+        "level": 14,
+        "features": ["Blindsense"]
+      },
+      {
+        "level": 18,
+        "features": ["Elusive"]
+      },
+      {
+        "level": 20,
+        "features": ["Stroke of Luck"]
+      }
+    ],
+    "extraAttack": [0],
+    "abilityScoreImprovement": [4, 8, 10, 14, 16, 19]
+  }
+
+]

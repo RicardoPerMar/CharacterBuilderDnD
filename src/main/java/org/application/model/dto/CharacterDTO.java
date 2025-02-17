@@ -1,5 +1,6 @@
 package org.application.model.dto;
 
+import org.application.model.CharacterClass;
 import org.application.model.Race;
 import org.application.model.Stat;
 
@@ -8,6 +9,7 @@ public class CharacterDTO {
     private int level;
     private Race race;
     private Stat stat;
+    private CharacterClass characterClass;
 
     public int getLevel() {
         return level;
@@ -39,5 +41,13 @@ public class CharacterDTO {
 
     public void setStat(Stat stat) {
         this.stat = stat;
+    }
+
+    public CharacterClass getCharacterClass() {
+        return characterClass;
+    }
+
+    public void setCharacterClass(CharacterClass characterClass) {
+        this.characterClass = characterClass;
     }
 }

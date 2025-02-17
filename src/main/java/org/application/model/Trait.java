@@ -20,9 +20,6 @@ public class Trait {
     @JoinColumn(name = "race_id")
     private Race race;
 
-    public Trait() {
-    }
-
     public String getDescription() {
         return description;
     }

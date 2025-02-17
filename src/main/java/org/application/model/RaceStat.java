@@ -24,9 +24,6 @@ public class RaceStat {
         return id;
     }
 
-    public RaceStat() {
-    }
-
     public void setId(Long id) {
         this.id = id;
     }

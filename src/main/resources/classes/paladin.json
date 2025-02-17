@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Paladin",
+    "hitDice": "1d10",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "All armor, shields" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "All simple and martial weapons" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "None" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Wisdom, Charisma" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Divine Sense", "Lay on Hands"]
+      },
+      {
+        "level": 2,
+        "features": ["Divine Smite", "Spellcasting"]
+      },
+      {
+        "level": 3,
+        "features": ["Divine Health"]
+      },
+      {
+        "level": 5,
+        "features": ["Extra Attack"]
+      },
+      {
+        "level": 6,
+        "features": ["Aura of Protection"]
+      },
+      {
+        "level": 9,
+        "features": ["Aura of Courage"]
+      },
+      {
+        "level": 10,
+        "features": ["Divine Intervention"]
+      },
+      {
+        "level": 14,
+        "features": ["Cleansing Touch"]
+      },
+      {
+        "level": 18,
+        "features": ["Aura of Courage (Improved)"]
+      },
+      {
+        "level": 20,
+        "features": ["Improved Divine Smite"]
+      }
+    ],
+    "extraAttack": [5],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]

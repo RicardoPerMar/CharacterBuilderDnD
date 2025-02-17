@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Warlock",
+    "hitDice": "1d8",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "Light armor" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Simple weapons" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "None" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Wisdom, Charisma" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Otherworldly Patron", "Spellcasting"]
+      },
+      {
+        "level": 2,
+        "features": ["Pact Magic"]
+      },
+      {
+        "level": 3,
+        "features": ["Pact Boon"]
+      },
+      {
+        "level": 5,
+        "features": ["Eldritch Blast", "Extra Attack"]
+      },
+      {
+        "level": 6,
+        "features": ["Mystic Arcanum"]
+      },
+      {
+        "level": 9,
+        "features": ["Aura of Fear"]
+      },
+      {
+        "level": 10,
+        "features": ["Advanced Pact Magic"]
+      },
+      {
+        "level": 14,
+        "features": ["Improved Eldritch Blast"]
+      },
+      {
+        "level": 18,
+        "features": ["Warlock's Revenge"]
+      },
+      {
+        "level": 20,
+        "features": ["Pact Mastery"]
+      }
+    ],
+    "extraAttack": [5],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]

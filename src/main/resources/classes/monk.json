@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Monk",
+    "hitDice": "1d8",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "None" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Simple weapons, shortswords" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "Choose one type of artisan's tools" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Strength, Dexterity" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Martial Arts", "Unarmored Defense"]
+      },
+      {
+        "level": 2,
+        "features": ["Ki", "Unarmored Movement"]
+      },
+      {
+        "level": 3,
+        "features": ["Deflect Missiles", "Monastic Tradition"]
+      },
+      {
+        "level": 5,
+        "features": ["Extra Attack", "Step of the Wind"]
+      },
+      {
+        "level": 6,
+        "features": ["Ki Empowered Strikes"]
+      },
+      {
+        "level": 9,
+        "features": ["Unarmored Movement (Improved)"]
+      },
+      {
+        "level": 10,
+        "features": ["Purity of Body"]
+      },
+      {
+        "level": 14,
+        "features": ["Diamond Soul"]
+      },
+      {
+        "level": 18,
+        "features": ["Empty Body"]
+      },
+      {
+        "level": 20,
+        "features": ["Perfect Self"]
+      }
+    ],
+    "extraAttack": [5],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]

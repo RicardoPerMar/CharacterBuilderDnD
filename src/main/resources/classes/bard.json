@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Bard",
+    "hitDice": "1d8",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "Light armor" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Simple weapons, longswords, rapiers, shortswords" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "Three musical instruments of your choice" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Dexterity, Charisma" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Bardic Inspiration", "Spellcasting"]
+      },
+      {
+        "level": 2,
+        "features": ["Jack of All Trades", "Song of Rest"]
+      },
+      {
+        "level": 3,
+        "features": ["College of Lore"]
+      },
+      {
+        "level": 5,
+        "features": ["Countercharm", "Font of Inspiration"]
+      },
+      {
+        "level": 6,
+        "features": ["Counterspell"]
+      },
+      {
+        "level": 9,
+        "features": ["Song of Rest Improvement"]
+      },
+      {
+        "level": 10,
+        "features": ["Additional Magical Secrets"]
+      },
+      {
+        "level": 14,
+        "features": ["Magical Secrets"]
+      },
+      {
+        "level": 18,
+        "features": ["Counterspell (Improved)"]
+      },
+      {
+        "level": 20,
+        "features": ["Superior Inspiration"]
+      }
+    ],
+    "extraAttack": [0],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]

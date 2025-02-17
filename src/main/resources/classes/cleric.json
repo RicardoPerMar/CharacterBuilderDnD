@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Cleric",
+    "hitDice": "1d8",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "Light armor, medium armor, shields" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Simple weapons" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "None" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Wisdom, Charisma" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Divine Domain", "Spellcasting"]
+      },
+      {
+        "level": 2,
+        "features": ["Channel Divinity"]
+      },
+      {
+        "level": 3,
+        "features": ["Divine Intervention"]
+      },
+      {
+        "level": 5,
+        "features": ["Destroy Undead"]
+      },
+      {
+        "level": 6,
+        "features": ["Channel Divinity (Improved)"]
+      },
+      {
+        "level": 8,
+        "features": ["Divine Strike"]
+      },
+      {
+        "level": 10,
+        "features": ["Aura of Protection"]
+      },
+      {
+        "level": 14,
+        "features": ["Divine Intervention (Greater)"]
+      },
+      {
+        "level": 18,
+        "features": ["Improved Destroy Undead"]
+      },
+      {
+        "level": 20,
+        "features": ["Supreme Divine Intervention"]
+      }
+    ],
+    "extraAttack": [0],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]

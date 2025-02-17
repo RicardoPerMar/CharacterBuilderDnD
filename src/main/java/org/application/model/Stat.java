@@ -1,10 +1,12 @@
 package org.application.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "stat")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Stat {
 
     @Id
@@ -30,7 +32,6 @@ public class Stat {
     private int cha;
 
     @OneToOne(mappedBy = "stat")
-    @JsonBackReference
     private Character character;
 
     public int getCha() {

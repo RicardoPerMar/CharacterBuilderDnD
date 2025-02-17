@@ -1,9 +1,9 @@
 package org.application.repository;
 
-import org.application.model.Stat;
+import org.application.model.Proficiency;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StatRepository extends JpaRepository<Stat, Long> {
+public interface ProficiencyRepository extends JpaRepository<Proficiency, Long> {
 }

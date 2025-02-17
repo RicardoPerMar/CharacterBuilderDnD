@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Druid",
+    "hitDice": "1d8",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "Light armor, medium armor, shields" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Clubs, daggers, darts, javelins, maces, quarterstaffs, sickles, spears" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "Herbalism kit" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Intelligence, Wisdom" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Spellcasting", "Wild Shape"]
+      },
+      {
+        "level": 2,
+        "features": ["Wild Shape (Improved)"]
+      },
+      {
+        "level": 3,
+        "features": ["Circle of the Land"]
+      },
+      {
+        "level": 5,
+        "features": ["Archdruid"]
+      },
+      {
+        "level": 6,
+        "features": ["Timeless Body"]
+      },
+      {
+        "level": 9,
+        "features": ["Archdruid (Improved)"]
+      },
+      {
+        "level": 10,
+        "features": ["Nature's Ward"]
+      },
+      {
+        "level": 14,
+        "features": ["Nature's Sanctuary"]
+      },
+      {
+        "level": 18,
+        "features": ["Archdruid (Advanced)"]
+      },
+      {
+        "level": 20,
+        "features": ["Archdruid (Master)"]
+      }
+    ],
+    "extraAttack": [0],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]

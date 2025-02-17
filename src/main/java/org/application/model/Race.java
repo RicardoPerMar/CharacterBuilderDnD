@@ -5,9 +5,10 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+
 @Entity
 @Table(name = "races")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Race {
 
     @Id
@@ -31,9 +32,6 @@ public class Race {
 
     @OneToMany(mappedBy = "race", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Character> characters;
-
-    public Race() {
-    }
 
     public Long getId() {
         return id;

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Ranger",
+    "hitDice": "1d10",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "Light armor, medium armor, shields" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Simple weapons, martial weapons" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "None" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Dexterity, Wisdom" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Favored Enemy", "Natural Explorer"]
+      },
+      {
+        "level": 2,
+        "features": ["Fighting Style", "Spellcasting"]
+      },
+      {
+        "level": 3,
+        "features": ["Ranger Archetype"]
+      },
+      {
+        "level": 5,
+        "features": ["Extra Attack"]
+      },
+      {
+        "level": 6,
+        "features": ["Hunter's Mark"]
+      },
+      {
+        "level": 9,
+        "features": ["Ranger's Step"]
+      },
+      {
+        "level": 10,
+        "features": ["Nature's Veil"]
+      },
+      {
+        "level": 14,
+        "features": ["Whirlwind Attack"]
+      },
+      {
+        "level": 18,
+        "features": ["Master Tracker"]
+      },
+      {
+        "level": 20,
+        "features": ["Improved Combat"]
+      }
+    ],
+    "extraAttack": [5],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]

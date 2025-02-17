@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Sorcerer",
+    "hitDice": "1d6",
+    "proficiencies": [
+      { "proficiencyType": "Armor", "proficiencyDescription": "None" },
+      { "proficiencyType": "Weapons", "proficiencyDescription": "Daggers, darts, slings, quarterstaffs, light crossbows" },
+      { "proficiencyType": "Tools", "proficiencyDescription": "None" },
+      { "proficiencyType": "Saving Throws", "proficiencyDescription": "Constitution, Charisma" }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "features": ["Spellcasting", "Sorcerer's Origin"]
+      },
+      {
+        "level": 2,
+        "features": ["Font of Magic"]
+      },
+      {
+        "level": 3,
+        "features": ["Metamagic"]
+      },
+      {
+        "level": 5,
+        "features": ["Extra Attack"]
+      },
+      {
+        "level": 6,
+        "features": ["Sorcerous Restoration"]
+      },
+      {
+        "level": 9,
+        "features": ["Empowered Spells"]
+      },
+      {
+        "level": 10,
+        "features": ["Advanced Metamagic"]
+      },
+      {
+        "level": 14,
+        "features": ["Twinning Spells"]
+      },
+      {
+        "level": 18,
+        "features": ["Sorcerer's Mastery"]
+      },
+      {
+        "level": 20,
+        "features": ["Sorcerer Supreme"]
+      }
+    ],
+    "extraAttack": [0],
+    "abilityScoreImprovement": [4, 8, 12, 16, 19]
+  }
+]
